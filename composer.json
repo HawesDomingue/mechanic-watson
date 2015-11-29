@@ -18,13 +18,13 @@
         "php": ">=5.3.3",
         "silex/silex": "1.*",
         "herrera-io/pdo-log": "~1.0",
-        "twig/twig": "1.6.5",
-        "heroku/heroku-buildpack-php": "v83"
+        "twig/twig": "1.6.5"
     },
     "require-dev": {
         "herrera-io/phpunit-test-case": "~1.0",
         "monolog/monolog": "~1.1",
-        "phpunit/phpunit": "~3.7"
+        "phpunit/phpunit": "~3.7",
+        "heroku/heroku-buildpack-php": "v83"
     },
     "autoload": {
         "psr-0": {
