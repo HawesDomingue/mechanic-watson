@@ -281,7 +281,7 @@ phpbb.plupload.deleteFile = function(row, attachId) {
 	$.ajax(phpbb.plupload.config.url, {
 		type: 'POST',
 		data: $.extend(fields, phpbb.plupload.getSerializedData()),
-		headers: phpbb.plupload.config.headers
+		headers: { 'X-PHPBB-USING-PLUPLOAD': '1', 'X-Requested-With': 'XMLHttpRequest' }
 	})
 	.always(always)
 	.done(done);

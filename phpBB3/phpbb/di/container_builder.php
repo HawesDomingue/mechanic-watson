@@ -399,6 +399,7 @@ class container_builder
 	*/
 	protected function get_container_filename()
 	{
-		return $this->phpbb_root_path . 'cache/container_' . md5($this->phpbb_root_path) . '.' . $this->php_ext;
+		$filename = str_replace(array('/', '.'), array('slash', 'dot'), $this->phpbb_root_path);
+		return $this->phpbb_root_path . 'cache/container_' . $filename . '.' . $this->php_ext;
 	}
 }

@@ -160,7 +160,7 @@ class style_update_p1 extends \phpbb\db\migration\migration
 				FROM ' . STYLES_TABLE . "
 				WHERE style_name = 'prosilver'";
 			$result = $this->sql_query($sql);
-			$default_style = $this->db->sql_fetchfield('style_id');
+			$default_style = $this->db->sql_fetchfield($result);
 			$this->db->sql_freeresult($result);
 
 			$this->config->set('default_style', $default_style);

@@ -120,7 +120,6 @@ services:
             - @config
             - @dbal.conn
             - @user
-            - @dispatcher
         calls:
             - [set_name, [cron.task.core.tidy_search]]
         tags:

@@ -24,7 +24,7 @@ class Twig_Node_Import extends Twig_Node
     /**
      * Compiles the node to PHP.
      *
-     * @param Twig_Compiler $compiler A Twig_Compiler instance
+     * @param Twig_Compiler A Twig_Compiler instance
      */
     public function compile(Twig_Compiler $compiler)
     {
@@ -36,16 +36,12 @@ class Twig_Node_Import extends Twig_Node
         ;
 
         if ($this->getNode('expr') instanceof Twig_Node_Expression_Name && '_self' === $this->getNode('expr')->getAttribute('name')) {
-            $compiler->raw('$this');
+            $compiler->raw("\$this");
         } else {
             $compiler
-                ->raw('$this->loadTemplate(')
+                ->raw('$this->env->loadTemplate(')
                 ->subcompile($this->getNode('expr'))
-                ->raw(', ')
-                ->repr($compiler->getFilename())
-                ->raw(', ')
-                ->repr($this->getLine())
-                ->raw(')')
+                ->raw(")")
             ;
         }
 

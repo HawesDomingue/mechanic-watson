@@ -30,11 +30,10 @@ if (!defined('IN_PHPBB'))
 * @param string $avatar_height Height of users avatar
 * @param string $alt Optional language string for alt tag within image, can be a language key or text
 * @param bool $ignore_config Ignores the config-setting, to be still able to view the avatar in the UCP
-* @param bool $lazy If true, will be lazy loaded (requires JS)
 *
 * @return string Avatar image
 */
-function get_user_avatar($avatar, $avatar_type, $avatar_width, $avatar_height, $alt = 'USER_AVATAR', $ignore_config = false, $lazy = false)
+function get_user_avatar($avatar, $avatar_type, $avatar_width, $avatar_height, $alt = 'USER_AVATAR', $ignore_config = false)
 {
 	// map arguments to new function phpbb_get_avatar()
 	$row = array(
@@ -44,7 +43,7 @@ function get_user_avatar($avatar, $avatar_type, $avatar_width, $avatar_height, $
 		'avatar_height'	=> $avatar_height,
 	);
 
-	return phpbb_get_avatar($row, $alt, $ignore_config, $lazy);
+	return phpbb_get_avatar($row, $alt, $ignore_config);
 }
 
 /**
