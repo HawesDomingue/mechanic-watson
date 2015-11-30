@@ -9,7 +9,6 @@ $pun_config = array (
   'o_parser_revision' => '2',
   'o_board_title' => 'Mechanic Watson Forum',
   'o_board_desc' => '<p><span>Get questions answered about your vehicle.</span></p>',
-  'o_default_timezone' => '0',
   'o_time_format' => 'H:i:s',
   'o_date_format' => 'Y-m-d',
   'o_timeout_visit' => '1800',
@@ -48,7 +47,6 @@ $pun_config = array (
   'o_avatars_height' => '60',
   'o_avatars_size' => '10240',
   'o_search_all_forums' => '1',
-  'o_base_url' => 'http://localhost/mechanic-watson/forum',
   'o_admin_email' => 'hawesdomingue@utexas.edu',
   'o_webmaster_email' => 'hawesdomingue@utexas.edu',
   'o_forum_subscriptions' => '1',
@@ -80,6 +78,8 @@ $pun_config = array (
   'p_allow_banned_email' => '1',
   'p_allow_dupe_email' => '0',
   'p_force_guest_email' => '1',
+  'o_base_url' => 'http://mechanic-watson.herokuapp.com/forum',
+  'o_default_timezone' => '-6',
 );
 
 ?>
