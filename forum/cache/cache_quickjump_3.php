@@ -13,6 +13,9 @@ $forum_id = isset($forum_id) ? $forum_id : 0;
 						<optgroup label="Android App">
 							<option value="3"<?php echo ($forum_id == 3) ? ' selected="selected"' : '' ?>>App Feedback</option>
 						</optgroup>
+						<optgroup label="Meta">
+							<option value="4"<?php echo ($forum_id == 4) ? ' selected="selected"' : '' ?>>Forum</option>
+						</optgroup>
 					</select></label>
 					<input type="submit" value="<?php echo $lang_common['Go'] ?>" accesskey="g" />
 					</div>
