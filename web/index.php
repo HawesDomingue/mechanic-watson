@@ -3,7 +3,7 @@
   <title>Mechanic Watson</title>
  </head>
  <body>
- <?php echo '<p>Hello World</p>'; ?>
+ <?php require('../vendor/autoload.php'); ?>
  <a href="forum">Go to forum</a>
 </body>
 </html>
