@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 vendor/
 .env
+=======
+/.idea/
+/bin/
+/coverage/
+/src/vendors/
+.env
+>>>>>>> 5366bb026100e91eb3e2e0289ea9551a5c5b57fa
