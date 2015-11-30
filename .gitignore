@@ -2,3 +2,4 @@
 /bin/
 /coverage/
 /src/vendors/
+.env
