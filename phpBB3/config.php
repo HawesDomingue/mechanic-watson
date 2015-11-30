@@ -15,3 +15,7 @@ $acm_type = 'phpbb\\cache\\driver\\file';
 // @define('PHPBB_DISPLAY_LOAD_TIME', true);
 // @define('DEBUG', true);
 // @define('DEBUG_CONTAINER', true);
+
+$table_prefix = 'phpbb_';
+$acm_type = 'file';
+$load_extensions = '';
