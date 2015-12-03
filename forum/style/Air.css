@@ -22,18 +22,37 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 .pun select {
 	padding-bottom: 1px;
 	padding-top: 1px;
-	padding-right: 1px;
 }
+/* HTML5 element fixes ------------------------------------------------------ */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+audio:not([controls]) {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+.hidden {display:none;}
 
 /* Content Defaults
 ----------------------------------------------------------------*/
-
+body {
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	font: 90%/1.462em "PT Sans", Arial, Helvetica, sans-serif;
+}
 .pun {
-	font: 81.25%/1.462em Arial, Helvetica, sans-serif;
+	/*font: 90%/1.462em "PT Sans", Arial, Helvetica, sans-serif;*/
 }
 
 .pun table, .pun td, .pun th, .pun input, .pun select, .pun optgroup, .pun textarea, .pun legend {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
 	font-size: 1em;
 }
 
@@ -55,12 +74,12 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 .pun h1 {
-	font:2.154em/1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font:2.154em/1em "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
 	padding: 7px 0;
 }
 
 .pun h2, .pun .hd h2 {
-	font: 1.462em/1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font: 1.462em/1em "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
 	padding: 7px 0;
 }
 
@@ -165,13 +184,20 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 ----------------------------------------------------------------*/
 
 .pun {
-	max-width: 1070px;
-	margin: 0 auto;
-	padding: 30px 40px;
+	padding:0 0 40px 0;
+	width:96%;
+	margin:auto;
 }
 
+#punredirect.pun,#punmaint.pun {width:auto !important;}
 #punredirect, #punmaint {
 	padding: 60px 20% 12px 20%;
+}
+
+#ezbbcdialog.pun {
+	width:auto !important;
+	padding: 30px 40px;
+	font-size: 80%;
 }
 
 #puninstall, #pundb_update {
@@ -179,9 +205,8 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 .pun .punwrap {
-	border: 1px solid;
-	border-radius: 10px;
-	padding: 18px;
+	/*border: 1px solid;
+	padding: 18px;*/
 }
 
 #punredirect h2, #punmaint h2 {
@@ -247,36 +272,13 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 	padding: 10px 0;
 }
 
-#brddesc p {
-	padding: 0;
-}
 
-#brdmenu ul {
-	padding: 0;
-}
-
-#brdmenu li {
-	float: left;
-}
-
-#brdmenu a:link, #brdmenu a:visited {
-	border-right-style: solid;
-	border-width: 1px;
-	display: block;
-	min-width: 60px;
-	padding: 12px 16px 6px 8px;
-	white-space: nowrap;
-}
-
-#brdmenu a:hover, #brmenu a:active, #brdmenu a:focus {
-	text-decoration: none;
-}
 
 /* Welcome Box
 ----------------------------------------------------------------*/
 
 #brdwelcome {
-	padding: 10px 0;
+	padding: 20px 0;
 }
 
 #brdwelcome .conl, #brdwelcome .conr, #brdwelcome p, #brdwelcome li {
@@ -402,7 +404,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 /* Breadcrumbs, Postlink, Pagination
 ----------------------------------------------------------------*/
 
-.pun .linkst .inbox, .pun .linksb .inbox, .pun .postlinksb .inbox {
+.pun .linkst .inbox, .pun linksb .inbox, .pun .postlinksb .inbox {
 	overflow: hidden;
 }
 
@@ -412,14 +414,14 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 .pun .linkst .crumbs {
-	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	font-family: "PT Sans", "Trebuchet MS", Helvetica, Arial, sans-serif;
 	font-size: 1.462em;
 	line-height: 1.211em;
 	padding: 7px 0;
 }
 
 .pun .linksb .crumbs, .pun .postlinksb .crumbs {
-	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	font-family: "PT Sans", "Trebuchet MS", Helvetica, Arial, sans-serif;
 	font-size: 1.154em;
 }
 
@@ -440,7 +442,8 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 .pun .crumbs li {
 	float: left;
 	padding-right: 0.4em;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
+	font-size:80%;
 }
 
 .pun .crumbs li strong {
@@ -507,7 +510,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 #punindex #brdmain .blocktable h2, #punsearch #vf h2 {
-	font: 1em/1.462em Arial, Helvetica, sans-serif;
+	font: 1em/1.462em "PT Sans", Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	margin: 1px 1px 0 1px;
 	padding-left: 8px;
@@ -580,7 +583,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 .pun .blocktable .tcr {
-	width: 30%;
+	width: 24%;
 }
 
 .pun .blocktable td .newtext, .pun .blocktable td .pagestext, .pun .blocktable td .byuser {
@@ -650,6 +653,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 .pun .blocktable .tclcon {
+	height: 1%;
 	min-height: 1px;
 	overflow: hidden;
 	padding: 0 11px 0 12px;
@@ -700,7 +704,7 @@ MAIN POSTS
 }
 
 .pun .blockpost h2 {
-	font: 1em/1.462em Arial, Helvetica, sans-serif;
+	font: 1em/1.462em "PT Sans", Arial, Helvetica, sans-serif;
 	white-space: nowrap;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
@@ -718,7 +722,7 @@ MAIN POSTS
 #punsearch .blockpost h2 span span {
 	white-space: nowrap;
 	display: inline-block;
-	font: 1.077em "Trebuchet MS", Arial, Helvetica, sans-serif
+	font: 1.077em "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif
 }
 
 #punsearch .blockpost .icon {
@@ -728,8 +732,7 @@ MAIN POSTS
 }
 
 .pun .blockpost h2 .conr {
-	float: right;
-	text-align: right;
+	display:none;
 }
 
 .pun .blockpost .inbox {
@@ -857,7 +860,7 @@ MAIN POSTS
 }
 
 .pun .postmsg p, .pun .postmsg li, #punhelp p samp {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: "PT Sans", Verdana, Arial, Helvetica, sans-serif;
 }
 
 .pun .usercontent h1, .pun .usercontent h2, .pun .usercontent h3,
@@ -914,7 +917,7 @@ MAIN POSTS
 }
 
 .pun .codebox {
-	border-style: solid;
+	border-style: dashed;
 	border-width: 1px;
 	margin: 0.75em 1em;
 	padding: 0;
@@ -940,6 +943,7 @@ MAIN POSTS
 }
 
 .pun .codebox pre {
+	overflow-y:hidden;
 	overflow: auto;
 	width: 100%;
 	direction: ltr;
@@ -955,7 +959,7 @@ MAIN POSTS
 }
 
 .pun .codebox pre code {
-	padding: 0.5em;
+	padding: 0.75em;
 	white-space: pre;
 }
 
@@ -994,7 +998,7 @@ MAIN FORMS
 
 #punedit .blockform h2, #punpost .blockform h2, #postpreview h2, #posterror h2,
 .pun #quickpost h2, .pun #reportform h2, #pundelete .blockform h2 {
-	font: 1em/1.462em Arial, Helvetica, sans-serif;
+	font: 1em/1.462em "PT Sans", Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	white-space: nowrap;
 	padding: 10px 19px 4px 37px;
@@ -1157,15 +1161,11 @@ MAIN FORMS
 }
 
 .pun input[type=text], .pun select, .pun textarea {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: "PT Sans", Verdana, Arial, Helvetica, sans-serif;
 }
 
 .pun .txtarea textarea, .pun input.longinput {
 	width: 98%;
-}
-
-.pun textarea {
-	resize: vertical;
 }
 
 .pun #quickpost .txtarea {
@@ -1182,9 +1182,9 @@ MAIN FORMS
 }
 
 .pun .blockform .bblinks li span {
-	background: url(Air/img/help.png) center left no-repeat;
+	/*background: url(Air/img/help.png) center left no-repeat;*/
 	margin-right: 8px;
-	padding-left: 20px;
+	/*padding-left: 20px;*/
 	display: inline-block;
 }
 
@@ -1284,6 +1284,28 @@ MAIN FORMS
 	max-width: 25em;
 }
 
+.pun .checklist .checklist-item {
+	position: relative;
+}
+
+.pun .checklist .checklist-item label {
+	padding: 0 0 0 1.75em;
+}
+
+.pun .checklist .checklist-item .fld-input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.pun .checklist .checklist-item input {
+	margin: 0;
+	height: 1.55em;
+	width: 1.55em;
+}
+
 /*****************************************************************
 PROFILES (+ ADMIN MENU)
 *****************************************************************/
@@ -1355,7 +1377,7 @@ PROFILES (+ ADMIN MENU)
 	position: relative;
 }
 
-#adintro, #adstats, #adalerts {
+#adintro, #adstats {
 	border-style: solid;
 	border-width: 1px;
 	padding: 18px;
@@ -1369,7 +1391,7 @@ PROFILES (+ ADMIN MENU)
 	background: url(Air/img/bull.png) center left no-repeat;
 }
 
-#adstats .inbox, #adintro .inbox, #adalerts p {
+#adstats .inbox, #adintro .inbox {
 	border-style: solid;
 	border-width: 1px;
 	padding: 18px;
@@ -1396,167 +1418,160 @@ COLOUR SCHEME
 ----------------------------------------------------------------*/
 
 html, body, .pun {
-	background: #f6f9fc;
-	color: #333;
+	background: #2E3436;
+	color: #bfbfbf;
 }
 
 .pun .punwrap {
-	background: #fff;
-	border-color: #cad7e1;
-	color: #566579;
+	background: #2E3436;
+	border-color: #3B4245;
+	color: #bfbfbf;
 }
 
-#brdtitle #brddesc, .pun .pagepost, #brdstats #onlinelist, #brdfooter #searchlinks, #brdfooter #modcontrols,
+#announce, #brdmain, #quickpost, #brdstats, #brdtitle #brddesc, .pun .pagepost, #brdstats #onlinelist, #brdfooter #searchlinks, #brdfooter #modcontrols,
 #punmaint h2, #punredirect h2, #adminconsole .submittop, .pun #debugtime, .pun .pagelink a, .pun .pagelink * {
-	border-color: #b9c5ce;
+	border-color: #3B4245;
 }
 
 .pun a, .pun a:link, .pun a:visited {
-	color: #2365B0;
+	color: #FFF;
 }
 
 .pun a:hover, .pun a:active, .pun a:focus {
-	color: #b50000;
+	color: #FFF;
 }
 
 .pun .postmsg .postimg a:link img, .pun .postmsg .postimg a:visited img {
-	border-color: #22538a;
+	border-color: #3B4245;
 }
 
 .pun .postmsg .postimg a:hover img, .pun .postmsg .postimg a:active img, .pun .postmsg .postimg a:focus img {
-	border-color: #b50000;
+	border-color: #3B4245;
 }
 
+.pun .postmsg a {text-decoration: underline;}
+
+.pun .postsignature a {text-decoration: none;}
+.pun .postsignature a:hover {text-decoration: underline;}
 /* Primary Navigation
 ----------------------------------------------------------------*/
 
-#brdmenu {
-	background: #44699c;
-}
-
-#brdmenu a, #brdmenu a:link, #brdmenu a:visited {
-	background: #44699c;
-	border-color: #fff;
-	color: #d4dae2;
-}
-
-#brdmenu a:hover, #brdmenu a:active, #brdmenu a:focus {
-	background: #b50000;
-	border-color: #fff;
-	color: #fff;
-}
+#navsearch,#navrules { display:none; }
 
 /* Main Tables
 ----------------------------------------------------------------*/
 
 .pun .blocktable .box {
-	background: #fcfdfe;
-	border-color: #b9c5ce #d9e1e7;
+	background: #2E3436;
+	border-color: #3B4245 #3B4245;
 }
 
 #punindex .blocktable h2, .pun #vf h2 {
-	color: #357082;
+	color: #bfbfbf;
 }
 
 #adminconsole fieldset th, #adminconsole fieldset td {
-	background: #f6f9fc;
-	border-color: #dfe6ee;
+	background: #2E3436;
+	border-color: #3B4245;
 }
 
 .pun #users1 h2 {
-	background: #fff;
+	background: #2E3436;
 }
 
 .pun .blocktable td {
-	border-color: #dfe6ee;
+	border-color: #3B4245;
 }
 
 .pun .blocktable th {
-	background: #ebf1f5;
-	border-color: #cad7e1;
-	color: #357082;
+	background: #292F30;
+	border-color: #3B4245;
+	color: #bfbfbf;
 }
 
 .pun .blocktable td.tcl span.stickytext {
-	color: #3399CC;
+	color: #bfbfbf;
 }
 
 /* Main Posts
 ----------------------------------------------------------------*/
 
 .pun .blockpost {
-	background: #f6f9fc;
-	border-color: #b9c5ce #d9e1e7;
+	background: #32383B;
+	border-color: #3B4245 #3B4245;
 }
 
 .pun .blockpost h2 {
-	background: #ebf1f5;
-	border-color: #cad7e1;
-	color: #357082;
+	background: #292F30;
+	border-color: #3B4245;
+	color: #bfbfbf;
 }
 
 .pun .blockpost .postbody, .pun .blockpost .postfoot {
-	background: #fcfdfe;
-	border-color: #dfe6ee;
+	background: #2E3436;
+	border-color: #3B4245;
 }
 
 .pun .blockpost .postfootright li {
-	color: #fcfdfe;
+	color: #bfbfbf;
 }
 
 .pun .postmsg, #punhelp code, #punhelp samp {
-	color: #333;
+	color: #bfbfbf;
 }
 
 .pun .postsignature, .pun .postmsg .postedit {
-	color: #566579;
+	color: #bfbfbf;
 }
 
 .pun .quotebox {
-	background: #f8f9f0;
-	border-color: #7aadbd;
-	color: #566579;
+	background: #32383B;
+	border-color: #3B4245;
+	color: #bfbfbf;
+	border-left: 2px solid #bfbfbf; 
 }
 
 .pun .quotebox cite {
-	color: #357082;
+	color: #bfbfbf;
 }
 
 .pun .codebox, #punhelp .codebox code {
-	background: #333;
-	color: #fff;
+	background: #32383B;
+	color: #DBDBDB;
+	border-color: #bfbfbf;
 }
 
 .pun .postmsg hr {
-	background: #b9c5ce;
+	background: #3B4245;
 }
 
 .pun .postmsg ins, #punhelp samp ins {
-	background-color: #ff0;
+	background-color: #bfbfbf;
+	color:#2E3436;
 }
 
 /* Main Forms + Profile
 ----------------------------------------------------------------*/
 
-.pun .blockform .box, #adstats, #adintro, #adalerts, #postpreview, #posterror {
-	border-color: #b9c5ce #d9e1e7;
-	background: #ebf1f5;
+.pun .blockform .box, #adstats, #adintro, #postpreview, #posterror {
+	border-color: #3B4245 #3B4245;
+	background: #292F30;
 }
 
 #punmisc #rules .box, #punhelp .box {
-	border-color: #b9c5ce #d9e1e7;
-	background: #f6f9fc;
+	border-color: #3B4245 #3B4245;
+	background: #2E3436;
 }
 
 .pun #quickpost h2, #punpost .blockform h2, #punedit .blockform h2, #posterror h2,
 #pundelete .blockform h2 {
-	background: #ebf1f5;
-	color: #357082;
+	background: #292F30;
+	color: #bfbfbf;
 }
 
 .pun .forminfo {
-	background: #fff;
-	border-color: #dfe6ee;
+	background: #292F30;
+	border-color: #292F30;
 }
 
 #puninstall form#install .forminfo {
@@ -1564,54 +1579,54 @@ html, body, .pun {
 	color: #fff;
 }
 
-.pun #posterror .error-info, .pun #adalerts p {
-	background: #ffffe1;
-	border-color: #dfe6ee;
+.pun #posterror .error-info {
+	background: #2E3436;
+	border-color: #3B4245;
 }
 
 #puninstall form#install .error-info {
-	background: #ffffe1;
-	border-color: #dfe6ee;
+	background: #2E3436;
+	border-color: #3B4245;
 	color: #333;
 }
 
 .pun .infldset, #adintro .inbox, #adstats .inbox {
-	background: #f6f9fc;
-	border-color: #dfe6ee;
+	background: #2E3436;
+	border-color: #3B4245;
 }
 
 .pun label, .pun legend, #adminconsole fieldset th {
-	color: #357082;
+	color: #bfbfbf;
 }
 
 .pun fieldset p {
-	border-color: #b9c5ce;
+	border-color: #3B4245;
 }
 
 .pun .blockmenu ul, .pun .blockmenu li {
-	border-color: #b9c5ce;
+	border-color: #3B4245;
 }
 
 .pun .blockmenu a:hover, .pun .blockmenu a:active, .pun .blockmenu a:focus {
-	background: #ffffe6;
+	background: #292F30;
 }
 
 .pun .blockmenu .isactive a:link, .pun .blockmenu .isactive a:visited {
-	color: #333;
-	background: #f6f9fc;
+	color: #fff;
+	background: #292F30;
 	}
 
 .pun #viewprofile .box {
-	border-color: #b9c5ce #d9e1e7;
-	background: #ebf1f5;
+	border-color: #3B4245 #3B4245;
+	background: #292F30;
 }
 
 .pun #viewprofile dt, #adstats dt {
-	color: #357082;
+	color: #bfbfbf;
 }
 
 .pun #viewprofile dl, .pun #viewprofile dd, #adstats dl, #adstats dd {
-	border-color: #dfe6ee;
+	border-color: #3B4245;
 }
 
 #adminconsole fieldset td.nodefault {
@@ -1619,19 +1634,19 @@ html, body, .pun {
 }
 
 .pun .multiselect {
-	color: #357082;
+	color: #bfbfbf;
 }
 
 .pun .checklist {
-	background: white;
-	border-color: #ccc;
+	background: #292F30;
+	border-color: #3B4245;
 }
 
 /* Status Indicators
 ----------------------------------------------------------------*/
 
 .pun .icon {
-	border-color: #e8ecf1 #d4d9dd #dfe3e8 #e8ecf1;
+	border-color: #3B4245 #3B4245 #3B4245 #3B4245;
 }
 
 .pun .iredirect .icon {
@@ -1641,5 +1656,522 @@ html, body, .pun {
 }
 
 .pun .inew .icon {
-	border-color: #91b3d9 #87a8d1 #6c85bb #7292c3;
+	border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf;
+}
+
+/* Custom fortunes
+----------------------------------------------------------------*/
+.pun .fortunes {
+	border-left: 1px solid #3B4245;
+	border-right: 1px solid #3B4245;
+	background: #191C1E;
+}
+.pun .fortunes .fortune {
+	padding:40px 0;
+	margin:auto;
+	text-align: center;
+	font-size: 120%;
+}
+
+/* Custom Masthead etc.
+----------------------------------------------------------------*/
+
+#masthead {
+	width:96%;
+	margin:auto;
+	margin-top: 16px;
+	margin-bottom: 14px;
+	overflow: hidden;
+	background: #191C1E;
+	-webkit-box-shadow: 0px 2px 4px #151617;
+    -moz-box-shadow: 0px 2px 4px #151617;
+    box-shadow: 0px 2px 4px #151617;
+    
+}
+
+#masthead h1 {
+    font-size:8px;
+    margin:0;
+}
+#masthead #logo {
+    width:27px;
+    height:27px;
+    background:url(http://crunchbang.org/css/images/logo.png) center no-repeat;
+    /*margin:8px 0 0 10px;*/
+    padding: 10px 16px 4px 8px;
+    padding:;
+    float:left;
+}
+#masthead #logo:hover {
+    background:#000 url(http://crunchbang.org/css/images/logo.png) center no-repeat;
+}
+
+#sitemenu {
+    float:right;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+    list-style: none;
+}
+#sitemenu li {
+    float:left;
+    padding:0;
+    margin:0;
+}
+#masthead a {color:#fff;}
+#sitemenu a.sitesearch,
+#sitemenu a.showmenu {
+    border-left-style: solid;
+    min-width: 24px;
+    padding:0;
+    width:24px;
+    height:24px;
+    padding: 10px 16px 7px 8px;
+
+}
+#sitemenu a.sitesearch {
+    background:url(http://crunchbang.org/css/images/search.png) center no-repeat;
+    border:none;
+}
+#sitemenu a.showmenu {
+    background:url(http://crunchbang.org/css/images/menu.png) center no-repeat;
+}
+#sitemenu a:hover.sitesearch {
+    background:#000 url(http://crunchbang.org/css/images/search.png) center no-repeat;
+}
+#sitemenu a:hover.showmenu {
+    background:#000 url(http://crunchbang.org/css/images/menu.png) center no-repeat;
+}
+#sitemenu a.std {
+    display:none;
+}
+
+#mobmenu, #livesearch {
+    display: none;
+    clear:both;
+}
+#mobmenu ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+#mobmenu li {
+    margin:0;
+    padding:0;
+}
+#mobmenu a,#mobmenu a:visited {
+    display:block;
+    text-align: center;
+    border-top: 1px solid #2E3436;
+    padding:10px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+#mobmenu a:hover {
+    background:#000;
+}
+#livesearch {
+    border-top: 1px solid #2E3436;
+    padding:10px;
+}
+#livesearch h3 {
+    display: none;
+}
+#livesearch fieldset{
+    border:none;
+    margin:0 0 20px 0;
+    background:#191C1E;
+    padding:0px;
+    text-align:center;
+}
+
+#livesearch #s{
+    background:#bfbfbf;
+    color:#2E3436;
+    padding:4px 0 4px 6px;
+    border:0px solid #191C1E;
+    font-size:130%;
+    width:99%;
+    
+}
+::selection {
+    background:#191C1E;
+    color:#bfbfbf;
+}
+::-moz-selection {
+    background:#191C1E;
+    color:#bfbfbf;
+}
+#livesearch #submitButton {
+    display:none;
+}
+#livesearch #submitButton:hover {
+}
+#livesearch .webResult h3 {display: block;}
+#livesearch .webResult {margin-bottom:20px;border-top:1px solid #2E3436;padding-top:20px;}
+#livesearch .webResult .item {padding-left:10px;border-left:2px solid #2E3436;}
+#livesearch .webResult .item:hover{border-left:2px solid #bfbfbf;}
+#livesearch .webResult h3{font-size:100%;margin:0;}
+#livesearch .webResult h3 b{ color:#fff; }
+#livesearch .webResult h3 a{ text-decoration: none;color:#fff;}
+#livesearch .webResult p{ line-height:1.5;padding:10px 0 0 10px;margin:0;font-size:90%;}
+#livesearch .webResult p b{ color:white;}
+#more, a.url {color:#656667;font-size:80%;margin-left:10px;border:0;}
+#more:hover, a.url:hover {color:#dfdfdf;}
+
+#fini {
+    border-top: 2px solid #3B4245;
+    padding:20px 0 0 0;
+    margin:32px 0 20px 0;
+    font-size:86%;
+    color:#999;
+}
+#fini a {
+    color:#999;
+    text-decoration:underline;
+}
+#fini a:link,
+#fini a:visited,
+#fini a:hover,
+#fini a:active {
+    color:#dfdfdf;
+    text-decoration:none;
+    border-bottom: 1px solid #444;
+    padding-bottom:1px;
+}
+#fini a:hover {
+    border-bottom: 1px solid #dfdfdf;
+}
+#fini a.img {
+    border:none;
+}
+#fini .credit {
+}
+#fini p {
+    display:block;
+    float:left;
+    width:70%;
+}
+#fini .credit {
+    display:block;
+    float:right;
+    margin:0 0 0 6px;
+}
+#fini #footermenu {
+    display: none;
+}
+/* Misc
+----------------------------------------------------------------*/
+.ir {
+    display:block;
+    border:0;
+    text-indent:-999em;
+    overflow:hidden;
+    background-color:transparent;
+    background-repeat:no-repeat;
+    text-align:left;
+    direction:ltr;
+}
+.darklight {color:#bfbfbf;background:#191C1E;padding:6px;line-height: 1.8em;}
+.paginationcurrent {color:#4C5659;}
+/* Media Queries for responsive design -------------------------------------- */
+#brdmenu ul {padding: 0;display:none;}
+#brdmenu li {}
+#brdmenu a:link, #brdmenu a:visited {
+	border-top-style: solid;
+	border-width: 1px;
+	display: block;
+	padding: 10px 0px 10px 0px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+#brdmenu a:hover, #brmenu a:active, #brdmenu a:focus {
+	text-decoration: none;
+}
+#brdmenu {
+	background: #191C1E;
+	-webkit-box-shadow: 0px 2px 4px #151617;
+    -moz-box-shadow: 0px 2px 4px #151617;
+    box-shadow: 0px 2px 4px #151617;
+}
+
+#brdmenu a, #brdmenu a:link, #brdmenu a:visited {
+	background: #191C1E;
+	border-color: #2E3436;
+	color: #bfbfbf;
+}
+
+#brdmenu a:hover, #brdmenu a:active, #brdmenu a:focus {
+	background: #000;
+	border-color: #2E3436;
+	color: #fff;
+}
+#brdmenu a#brdmenubutton {border:0;
+	background:transparent url(http://crunchbang.org/css/images/menu.png) center no-repeat;
+	text-indent: -9999px;
+	outline:none;
+}
+#brdwelcome .conr {float:left;}
+.tc2,.tc3,.tcr,p.modlist{display: none;}
+.pun .blockpost .postright {padding:4px 110px 7px 18px;}
+.pun .blockpost .postleft,
+.pun .blockpost .postfootleft {width:70px;margin-left:-90px;}
+.pun .blockpost .postbody, .pun .blockpost .postfoot {margin-right:-90px;}
+.pun .blockpost .postfootright {padding:7px 110px 7px 18px;}
+.pun .blockpost .postleft dd {display:none;}
+.pun .blockpost .postleft dd.postavatar {display:block;}
+.community_info {display:none;}
+.datetimeposted {float:right;}
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+    #masthead, .pun {
+        position:relative;
+        width:470px;
+    }
+    .tcr{display: table-cell;}
+    #fini p {
+        display:block;
+        float:left;
+        width:70%;
+    }
+    #fini .credit {
+        display:block;
+        float:right;
+        margin:0 0 0 6px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+    #masthead, .pun  {
+        position:relative;
+        width:760px;
+    }
+
+    #sitemenu {
+        float:right;
+        padding:0;
+        margin:0;
+        overflow: hidden;
+        list-style: none;
+    }
+
+    #sitemenu li {
+        display:block;
+    }
+    #sitemenu li {
+        float: left;
+        padding:0;
+        margin:0;
+    }
+
+    #sitemenu a:link, #sitemenu a:visited {
+        border:0;
+        color: #bfbfbf;
+        border-color: #2E3436;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-right-style: solid;
+        border-width: 1px;
+        display: block;
+        min-width: 60px;
+        padding: 12px 16px 7px 8px;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    #sitemenu a.siteabout {
+        border-left-style: solid;
+    }
+
+    #sitemenu a.sitesearch,
+    #sitemenu a.showmenu {
+        border-left-style: solid;
+        min-width: 24px;
+        padding:0;
+        width:24px;
+        height:24px;
+        padding: 10px 16px 7px 8px;
+
+    }
+    #sitemenu a.sitesearch {
+        background:url(http://crunchbang.org/css/images/search.png) center no-repeat;
+        border:none;
+    }
+    #sitemenu a:hover, #sitemenu a:active, #sitemenu a:focus {
+        background:#000;
+        color:#fff;
+    }
+    #sitemenu a:hover.sitesearch,#sitemenu a:active.sitesearch,#sitemenu a:focus.sitesearch {
+        background:#000 url(http://crunchbang.org/css/images/search.png) center no-repeat;
+    }
+
+    #sitemenu a.std {
+        display: block;
+    }
+    #sitemenu a.showmenu {
+        display: none;
+    }
+    #mobmenu {
+        display: none;
+    }
+
+	#brddesc p {
+		padding: 0;
+	}
+
+	#brdmenu a#brdmenubutton{display:none;}
+
+	#brdmenu ul {
+		padding: 0;display:block;
+	}
+
+	#brdmenu li {
+		float: left;
+	}
+
+	#brdmenu a:link, #brdmenu a:visited {
+		border-top: 0;
+		border-right-style: solid;
+		border-width: 1px;
+		display: block;
+		min-width: 60px;
+		padding: 12px 16px 7px 8px;
+		white-space: nowrap;
+		text-align: left;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	#brdmenu a:hover, #brmenu a:active, #brdmenu a:focus {
+		text-decoration: none;
+	}
+	#brdmenu {
+		background: #191C1E;
+		-webkit-box-shadow: 0px 2px 4px #151617;
+	    -moz-box-shadow: 0px 2px 4px #151617;
+	    box-shadow: 0px 2px 4px #151617;
+	}
+
+	#brdmenu a, #brdmenu a:link, #brdmenu a:visited {
+		background: #191C1E;
+		border-color: #2E3436;
+		color: #bfbfbf;
+	}
+
+	#brdmenu a:hover, #brdmenu a:active, #brdmenu a:focus {
+		background: #000;
+		border-color: #2E3436;
+		color: #fff;
+	}
+
+    #brdwelcome .conr {float:right;}
+    .tc2,.tc3 {display: table-cell;}
+    .pun .blocktable .tcr {
+		width: 20%;
+	}
+    /*p.modlist {display:inline;}*/
+	.pun .blockpost .postright {padding:4px 230px 7px 18px;}
+	.pun .blockpost .postleft,
+	.pun .blockpost .postfootleft {width:194px;margin-left:-218px;}
+	.pun .blockpost .postbody, .pun .blockpost .postfoot {margin-right:-218px;}
+	.pun .blockpost .postfootright {padding:7px 270px 7px 18px;}
+	.pun .blockpost .postleft dd {display:block;}
+    .pun .blockpost .postleft dd.postavatar {display:block;}
+
+    .pun .blockpost h2 .conr {
+		display:block;
+		float: right;
+		text-align: right;
+	}
+	.datetimeposted {float:left;}
+	.pun .crumbs li {
+		white-space: nowrap;
+		font-size: 90%;
+	}
+
+    .pun .community_info {
+    	display:block;
+    	padding:10px;
+    	margin-bottom: 14px;
+    	overflow: hidden;
+    	border: 0px solid #3B4245;
+    	position:relative;
+    	background: #191C1E url(Air/img/2E3436.png) center repeat-y;
+    	-webkit-box-shadow: 0px 2px 4px #151617;
+	    -moz-box-shadow: 0px 2px 4px #151617;
+	    box-shadow: 0px 2px 4px #151617;
+    }
+    .community_info .irc {
+    	float:left;
+    	width:40%;
+    	padding-left: 60px;
+    	background:url(Air/img/irc.png) left center no-repeat;
+    	cursor: pointer;
+    }
+    .community_info .linode {
+    	float:left;
+    	width:40%;
+    	padding-left: 60px;
+    	background:url(Air/img/linode.png) left center no-repeat;
+    	cursor: pointer;
+    }
+    .community_info .twitter {
+    	float:right;
+    	width:40%;
+    	padding-left: 60px;
+    	background:url(Air/img/twitter.png) left center no-repeat;
+    	cursor: pointer;
+    }
+    .community_info .dreamhost {
+    	float:right;
+    	width:40%;
+    	padding-left: 60px;
+    	background:url(Air/img/dreamhost.png) left center no-repeat;
+    	cursor: pointer;
+    }
+    .community_info_close {
+    	position: absolute;
+    	top:10px;
+    	right:10px;
+    	width:20px;
+    	height:20px;
+    	background: url(Air/img/close.png) center repeat-y;
+    }
+
+    .pun .foot {
+    	margin-top:20px;
+    	margin-bottom: 0px;
+    }
+    .pun .foot.additional{
+    	margin-top:0px;
+    	margin-bottom: 14px;
+    	border-top: 1px solid #3B4245;
+    }
+
+
+}
+
+@media only screen and (min-width: 920px) {
+  /* Style adjustments for viewports 920px and over go here */
+    #masthead, .pun  {
+        position:relative;
+        width:920px;
+    }
+    .community_info .irc,
+    .community_info .linode {
+    	width:40%;
+    }
+    .community_info .twitter, 
+    .community_info .dreamhost{
+    	width:42%;
+    }
+
+}
+
+.req_user {
+	display:none;
 }
